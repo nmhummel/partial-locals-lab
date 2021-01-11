@@ -23,8 +23,8 @@ RSpec.describe 'classroom_show_view' do
 
   it 'renders a partial that only contains classroom (not student) information' do
     view.lookup_context.prefixes = %w[students]
-    assign(:classroom, classroom)
-    render partial: 'classrooms/classroom.html.erb', locals: { classroom: classroom }
+    assign(:charlie, classroom)
+    render partial: 'classrooms/classroom.html.erb', locals: { charlie: classroom }
     expect(rendered).to match /Math/
   end
 
